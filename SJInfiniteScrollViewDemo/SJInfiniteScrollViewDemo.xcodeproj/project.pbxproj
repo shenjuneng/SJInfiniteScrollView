@@ -176,12 +176,12 @@
 			children = (
 				9FDA9F582088677900BE441B /* SJInfiniteSubView.xib */,
 				9FDA9F592088677900BE441B /* SJInfiniteSubView.h */,
-				9FDA9F5A2088677900BE441B /* SJInfiniteItem.h */,
-				9FDA9F5B2088677900BE441B /* SJInfiniteScrollView.m */,
-				9FDA9F5C2088677900BE441B /* UIView+SJInfiniteScrollView.h */,
 				9FDA9F5D2088677900BE441B /* SJInfiniteSubView.m */,
 				9FDA9F5E2088677900BE441B /* SJInfiniteScrollView.h */,
+				9FDA9F5B2088677900BE441B /* SJInfiniteScrollView.m */,
+				9FDA9F5A2088677900BE441B /* SJInfiniteItem.h */,
 				9FDA9F5F2088677900BE441B /* SJInfiniteItem.m */,
+				9FDA9F5C2088677900BE441B /* UIView+SJInfiniteScrollView.h */,
 				9FDA9F602088677900BE441B /* UIView+SJInfiniteScrollView.m */,
 			);
 			path = SJInfiniteScrollView;
