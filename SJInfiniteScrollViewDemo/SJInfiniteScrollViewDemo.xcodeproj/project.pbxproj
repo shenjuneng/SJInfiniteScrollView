@@ -175,13 +175,13 @@
 			isa = PBXGroup;
 			children = (
 				9FDA9F6720886EC600BE441B /* SJInfiniteSubView.xib */,
-				9FDA9F6820886EC600BE441B /* SJInfiniteSubView.h */,
-				9FDA9F6920886EC600BE441B /* SJInfiniteItem.h */,
-				9FDA9F6A20886EC600BE441B /* SJInfiniteScrollView.m */,
-				9FDA9F6B20886EC600BE441B /* UIView+SJInfiniteScrollView.h */,
-				9FDA9F6C20886EC600BE441B /* SJInfiniteSubView.m */,
 				9FDA9F6D20886EC600BE441B /* SJInfiniteScrollView.h */,
+				9FDA9F6A20886EC600BE441B /* SJInfiniteScrollView.m */,
+				9FDA9F6820886EC600BE441B /* SJInfiniteSubView.h */,
+				9FDA9F6C20886EC600BE441B /* SJInfiniteSubView.m */,
+				9FDA9F6920886EC600BE441B /* SJInfiniteItem.h */,
 				9FDA9F6E20886EC600BE441B /* SJInfiniteItem.m */,
+				9FDA9F6B20886EC600BE441B /* UIView+SJInfiniteScrollView.h */,
 				9FDA9F6F20886EC600BE441B /* UIView+SJInfiniteScrollView.m */,
 			);
 			path = SJInfiniteScrollView;

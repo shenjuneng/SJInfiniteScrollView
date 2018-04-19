@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "SJInfiniteScrollView", "SJInfiniteScrollViewDemo/SJInfiniteScrollView/**/*.{h,m,xib}"
+  s.source_files  = "SJInfiniteScrollView", "SJInfiniteScrollView/**/*.{h,m,xib}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
