@@ -214,8 +214,9 @@
     CGFloat xView = 0;
     for (NSInteger i = 0; i < PageCount; i++) {
         
-        SJInfiniteSubView *view = [SJInfiniteSubView SJInfiniteSubView];
-        view.frame = CGRectMake(xView, 0, self.width, self.height);
+//        SJInfiniteSubView *view = [SJInfiniteSubView SJInfiniteSubView];
+        SJInfiniteSubView *view = [[SJInfiniteSubView alloc] initWithFrame:CGRectMake(xView, 0, self.width, self.height)];
+//        view.frame = CGRectMake(xView, 0, self.width, self.height);
         view.backgroundColor = [UIColor yellowColor];
         [self.subViewsArr addObject:view];
         [self addSubview:view];

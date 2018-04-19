@@ -10,12 +10,12 @@
 
 @interface SJInfiniteSubView : UIView
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImageView *imageView;
 
-@property (weak, nonatomic) IBOutlet UILabel *lb;
+@property (strong, nonatomic) UILabel *lb;
 
-- (instancetype)initView;
-
-+ (instancetype)SJInfiniteSubView;
+//- (instancetype)initView;
+//
+//+ (instancetype)SJInfiniteSubView;
 
 @end
