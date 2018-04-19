@@ -8,6 +8,7 @@
 
 #import "SJInfiniteScrollView.h"
 #import "SJInfiniteSubView.h"
+#import <UIImageView+WebCache.h>
 
 #define StartPage 4
 #define PageCount 10

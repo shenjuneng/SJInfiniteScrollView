@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8102683E4061B64388DA261F /* libPods-SJInfiniteScrollViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5DFCAEFFF0D4B08E5F0E5C /* libPods-SJInfiniteScrollViewDemo.a */; };
 		9FDA9F152088610300BE441B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F142088610300BE441B /* AppDelegate.m */; };
 		9FDA9F182088610300BE441B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F172088610300BE441B /* ViewController.m */; };
 		9FDA9F1B2088610300BE441B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA9F192088610300BE441B /* Main.storyboard */; };
@@ -15,11 +16,11 @@
 		9FDA9F232088610600BE441B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F222088610600BE441B /* main.m */; };
 		9FDA9F2D2088610600BE441B /* SJInfiniteScrollViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F2C2088610600BE441B /* SJInfiniteScrollViewDemoTests.m */; };
 		9FDA9F382088610600BE441B /* SJInfiniteScrollViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F372088610600BE441B /* SJInfiniteScrollViewDemoUITests.m */; };
-		9FDA9F4D208861F300BE441B /* SJInfiniteSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA9F46208861F300BE441B /* SJInfiniteSubView.xib */; };
-		9FDA9F4E208861F300BE441B /* SJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F49208861F300BE441B /* SJInfiniteScrollView.m */; };
-		9FDA9F4F208861F300BE441B /* SJInfiniteSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F4A208861F300BE441B /* SJInfiniteSubView.m */; };
-		9FDA9F50208861F300BE441B /* SJInfiniteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F4C208861F300BE441B /* SJInfiniteItem.m */; };
-		9FDA9F56208862B800BE441B /* UIView+SJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F55208862B800BE441B /* UIView+SJInfiniteScrollView.m */; };
+		9FDA9F612088677900BE441B /* SJInfiniteSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA9F582088677900BE441B /* SJInfiniteSubView.xib */; };
+		9FDA9F622088677900BE441B /* SJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F5B2088677900BE441B /* SJInfiniteScrollView.m */; };
+		9FDA9F632088677900BE441B /* SJInfiniteSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F5D2088677900BE441B /* SJInfiniteSubView.m */; };
+		9FDA9F642088677900BE441B /* SJInfiniteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F5F2088677900BE441B /* SJInfiniteItem.m */; };
+		9FDA9F652088677900BE441B /* UIView+SJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F602088677900BE441B /* UIView+SJInfiniteScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B5DFCAEFFF0D4B08E5F0E5C /* libPods-SJInfiniteScrollViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJInfiniteScrollViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FB232C4CE0334BF71A0ADBA /* Pods-SJInfiniteScrollViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJInfiniteScrollViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJInfiniteScrollViewDemo/Pods-SJInfiniteScrollViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9FDA9F102088610300BE441B /* SJInfiniteScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJInfiniteScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDA9F132088610300BE441B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9FDA9F142088610300BE441B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,15 +59,16 @@
 		9FDA9F332088610600BE441B /* SJInfiniteScrollViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SJInfiniteScrollViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDA9F372088610600BE441B /* SJInfiniteScrollViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteScrollViewDemoUITests.m; sourceTree = "<group>"; };
 		9FDA9F392088610600BE441B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FDA9F46208861F300BE441B /* SJInfiniteSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJInfiniteSubView.xib; sourceTree = "<group>"; };
-		9FDA9F47208861F300BE441B /* SJInfiniteSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteSubView.h; sourceTree = "<group>"; };
-		9FDA9F48208861F300BE441B /* SJInfiniteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteItem.h; sourceTree = "<group>"; };
-		9FDA9F49208861F300BE441B /* SJInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteScrollView.m; sourceTree = "<group>"; };
-		9FDA9F4A208861F300BE441B /* SJInfiniteSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteSubView.m; sourceTree = "<group>"; };
-		9FDA9F4B208861F300BE441B /* SJInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteScrollView.h; sourceTree = "<group>"; };
-		9FDA9F4C208861F300BE441B /* SJInfiniteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteItem.m; sourceTree = "<group>"; };
-		9FDA9F54208862B800BE441B /* UIView+SJInfiniteScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SJInfiniteScrollView.h"; sourceTree = "<group>"; };
-		9FDA9F55208862B800BE441B /* UIView+SJInfiniteScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SJInfiniteScrollView.m"; sourceTree = "<group>"; };
+		9FDA9F582088677900BE441B /* SJInfiniteSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJInfiniteSubView.xib; sourceTree = "<group>"; };
+		9FDA9F592088677900BE441B /* SJInfiniteSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteSubView.h; sourceTree = "<group>"; };
+		9FDA9F5A2088677900BE441B /* SJInfiniteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteItem.h; sourceTree = "<group>"; };
+		9FDA9F5B2088677900BE441B /* SJInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteScrollView.m; sourceTree = "<group>"; };
+		9FDA9F5C2088677900BE441B /* UIView+SJInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SJInfiniteScrollView.h"; sourceTree = "<group>"; };
+		9FDA9F5D2088677900BE441B /* SJInfiniteSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteSubView.m; sourceTree = "<group>"; };
+		9FDA9F5E2088677900BE441B /* SJInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteScrollView.h; sourceTree = "<group>"; };
+		9FDA9F5F2088677900BE441B /* SJInfiniteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteItem.m; sourceTree = "<group>"; };
+		9FDA9F602088677900BE441B /* UIView+SJInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SJInfiniteScrollView.m"; sourceTree = "<group>"; };
+		B42E0D90173B13C36F85DD08 /* Pods-SJInfiniteScrollViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJInfiniteScrollViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJInfiniteScrollViewDemo/Pods-SJInfiniteScrollViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8102683E4061B64388DA261F /* libPods-SJInfiniteScrollViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,14 +97,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0D7BE5BA2BC98D2E44BD80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B5DFCAEFFF0D4B08E5F0E5C /* libPods-SJInfiniteScrollViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7889388865893BF779D8DAFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FB232C4CE0334BF71A0ADBA /* Pods-SJInfiniteScrollViewDemo.debug.xcconfig */,
+				B42E0D90173B13C36F85DD08 /* Pods-SJInfiniteScrollViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9FDA9F072088610300BE441B = {
 			isa = PBXGroup;
 			children = (
-				9FDA9F45208861F300BE441B /* SJInfiniteScrollView */,
 				9FDA9F122088610300BE441B /* SJInfiniteScrollViewDemo */,
 				9FDA9F2B2088610600BE441B /* SJInfiniteScrollViewDemoTests */,
 				9FDA9F362088610600BE441B /* SJInfiniteScrollViewDemoUITests */,
 				9FDA9F112088610300BE441B /* Products */,
+				7889388865893BF779D8DAFA /* Pods */,
+				2A0D7BE5BA2BC98D2E44BD80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +139,7 @@
 		9FDA9F122088610300BE441B /* SJInfiniteScrollViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9FDA9F572088677900BE441B /* SJInfiniteScrollView */,
 				9FDA9F132088610300BE441B /* AppDelegate.h */,
 				9FDA9F142088610300BE441B /* AppDelegate.m */,
 				9FDA9F162088610300BE441B /* ViewController.h */,
@@ -147,18 +171,18 @@
 			path = SJInfiniteScrollViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		9FDA9F45208861F300BE441B /* SJInfiniteScrollView */ = {
+		9FDA9F572088677900BE441B /* SJInfiniteScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				9FDA9F46208861F300BE441B /* SJInfiniteSubView.xib */,
-				9FDA9F4B208861F300BE441B /* SJInfiniteScrollView.h */,
-				9FDA9F49208861F300BE441B /* SJInfiniteScrollView.m */,
-				9FDA9F47208861F300BE441B /* SJInfiniteSubView.h */,
-				9FDA9F4A208861F300BE441B /* SJInfiniteSubView.m */,
-				9FDA9F48208861F300BE441B /* SJInfiniteItem.h */,
-				9FDA9F4C208861F300BE441B /* SJInfiniteItem.m */,
-				9FDA9F54208862B800BE441B /* UIView+SJInfiniteScrollView.h */,
-				9FDA9F55208862B800BE441B /* UIView+SJInfiniteScrollView.m */,
+				9FDA9F582088677900BE441B /* SJInfiniteSubView.xib */,
+				9FDA9F592088677900BE441B /* SJInfiniteSubView.h */,
+				9FDA9F5A2088677900BE441B /* SJInfiniteItem.h */,
+				9FDA9F5B2088677900BE441B /* SJInfiniteScrollView.m */,
+				9FDA9F5C2088677900BE441B /* UIView+SJInfiniteScrollView.h */,
+				9FDA9F5D2088677900BE441B /* SJInfiniteSubView.m */,
+				9FDA9F5E2088677900BE441B /* SJInfiniteScrollView.h */,
+				9FDA9F5F2088677900BE441B /* SJInfiniteItem.m */,
+				9FDA9F602088677900BE441B /* UIView+SJInfiniteScrollView.m */,
 			);
 			path = SJInfiniteScrollView;
 			sourceTree = "<group>";
@@ -170,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FDA9F3C2088610600BE441B /* Build configuration list for PBXNativeTarget "SJInfiniteScrollViewDemo" */;
 			buildPhases = (
+				422C0E5A3D19A013A5E8ACA1 /* [CP] Check Pods Manifest.lock */,
 				9FDA9F0C2088610300BE441B /* Sources */,
 				9FDA9F0D2088610300BE441B /* Frameworks */,
 				9FDA9F0E2088610300BE441B /* Resources */,
@@ -268,7 +293,7 @@
 			files = (
 				9FDA9F202088610600BE441B /* LaunchScreen.storyboard in Resources */,
 				9FDA9F1D2088610600BE441B /* Assets.xcassets in Resources */,
-				9FDA9F4D208861F300BE441B /* SJInfiniteSubView.xib in Resources */,
+				9FDA9F612088677900BE441B /* SJInfiniteSubView.xib in Resources */,
 				9FDA9F1B2088610300BE441B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,18 +314,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		422C0E5A3D19A013A5E8ACA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SJInfiniteScrollViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9FDA9F0C2088610300BE441B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9FDA9F182088610300BE441B /* ViewController.m in Sources */,
-				9FDA9F4F208861F300BE441B /* SJInfiniteSubView.m in Sources */,
+				9FDA9F632088677900BE441B /* SJInfiniteSubView.m in Sources */,
 				9FDA9F232088610600BE441B /* main.m in Sources */,
-				9FDA9F50208861F300BE441B /* SJInfiniteItem.m in Sources */,
-				9FDA9F4E208861F300BE441B /* SJInfiniteScrollView.m in Sources */,
+				9FDA9F642088677900BE441B /* SJInfiniteItem.m in Sources */,
+				9FDA9F622088677900BE441B /* SJInfiniteScrollView.m in Sources */,
 				9FDA9F152088610300BE441B /* AppDelegate.m in Sources */,
-				9FDA9F56208862B800BE441B /* UIView+SJInfiniteScrollView.m in Sources */,
+				9FDA9F652088677900BE441B /* UIView+SJInfiniteScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +513,7 @@
 		};
 		9FDA9F3D2088610600BE441B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB232C4CE0334BF71A0ADBA /* Pods-SJInfiniteScrollViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +531,7 @@
 		};
 		9FDA9F3E2088610600BE441B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B42E0D90173B13C36F85DD08 /* Pods-SJInfiniteScrollViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
