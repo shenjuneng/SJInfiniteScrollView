@@ -15,6 +15,11 @@
 		9FDA9F232088610600BE441B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F222088610600BE441B /* main.m */; };
 		9FDA9F2D2088610600BE441B /* SJInfiniteScrollViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F2C2088610600BE441B /* SJInfiniteScrollViewDemoTests.m */; };
 		9FDA9F382088610600BE441B /* SJInfiniteScrollViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F372088610600BE441B /* SJInfiniteScrollViewDemoUITests.m */; };
+		9FDA9F4D208861F300BE441B /* SJInfiniteSubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA9F46208861F300BE441B /* SJInfiniteSubView.xib */; };
+		9FDA9F4E208861F300BE441B /* SJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F49208861F300BE441B /* SJInfiniteScrollView.m */; };
+		9FDA9F4F208861F300BE441B /* SJInfiniteSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F4A208861F300BE441B /* SJInfiniteSubView.m */; };
+		9FDA9F50208861F300BE441B /* SJInfiniteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F4C208861F300BE441B /* SJInfiniteItem.m */; };
+		9FDA9F56208862B800BE441B /* UIView+SJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA9F55208862B800BE441B /* UIView+SJInfiniteScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,15 @@
 		9FDA9F332088610600BE441B /* SJInfiniteScrollViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SJInfiniteScrollViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDA9F372088610600BE441B /* SJInfiniteScrollViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteScrollViewDemoUITests.m; sourceTree = "<group>"; };
 		9FDA9F392088610600BE441B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FDA9F46208861F300BE441B /* SJInfiniteSubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJInfiniteSubView.xib; sourceTree = "<group>"; };
+		9FDA9F47208861F300BE441B /* SJInfiniteSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteSubView.h; sourceTree = "<group>"; };
+		9FDA9F48208861F300BE441B /* SJInfiniteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteItem.h; sourceTree = "<group>"; };
+		9FDA9F49208861F300BE441B /* SJInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteScrollView.m; sourceTree = "<group>"; };
+		9FDA9F4A208861F300BE441B /* SJInfiniteSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteSubView.m; sourceTree = "<group>"; };
+		9FDA9F4B208861F300BE441B /* SJInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteScrollView.h; sourceTree = "<group>"; };
+		9FDA9F4C208861F300BE441B /* SJInfiniteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteItem.m; sourceTree = "<group>"; };
+		9FDA9F54208862B800BE441B /* UIView+SJInfiniteScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SJInfiniteScrollView.h"; sourceTree = "<group>"; };
+		9FDA9F55208862B800BE441B /* UIView+SJInfiniteScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SJInfiniteScrollView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +95,7 @@
 		9FDA9F072088610300BE441B = {
 			isa = PBXGroup;
 			children = (
+				9FDA9F45208861F300BE441B /* SJInfiniteScrollView */,
 				9FDA9F122088610300BE441B /* SJInfiniteScrollViewDemo */,
 				9FDA9F2B2088610600BE441B /* SJInfiniteScrollViewDemoTests */,
 				9FDA9F362088610600BE441B /* SJInfiniteScrollViewDemoUITests */,
@@ -130,6 +145,22 @@
 				9FDA9F392088610600BE441B /* Info.plist */,
 			);
 			path = SJInfiniteScrollViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		9FDA9F45208861F300BE441B /* SJInfiniteScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				9FDA9F46208861F300BE441B /* SJInfiniteSubView.xib */,
+				9FDA9F4B208861F300BE441B /* SJInfiniteScrollView.h */,
+				9FDA9F49208861F300BE441B /* SJInfiniteScrollView.m */,
+				9FDA9F47208861F300BE441B /* SJInfiniteSubView.h */,
+				9FDA9F4A208861F300BE441B /* SJInfiniteSubView.m */,
+				9FDA9F48208861F300BE441B /* SJInfiniteItem.h */,
+				9FDA9F4C208861F300BE441B /* SJInfiniteItem.m */,
+				9FDA9F54208862B800BE441B /* UIView+SJInfiniteScrollView.h */,
+				9FDA9F55208862B800BE441B /* UIView+SJInfiniteScrollView.m */,
+			);
+			path = SJInfiniteScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +268,7 @@
 			files = (
 				9FDA9F202088610600BE441B /* LaunchScreen.storyboard in Resources */,
 				9FDA9F1D2088610600BE441B /* Assets.xcassets in Resources */,
+				9FDA9F4D208861F300BE441B /* SJInfiniteSubView.xib in Resources */,
 				9FDA9F1B2088610300BE441B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FDA9F182088610300BE441B /* ViewController.m in Sources */,
+				9FDA9F4F208861F300BE441B /* SJInfiniteSubView.m in Sources */,
 				9FDA9F232088610600BE441B /* main.m in Sources */,
+				9FDA9F50208861F300BE441B /* SJInfiniteItem.m in Sources */,
+				9FDA9F4E208861F300BE441B /* SJInfiniteScrollView.m in Sources */,
 				9FDA9F152088610300BE441B /* AppDelegate.m in Sources */,
+				9FDA9F56208862B800BE441B /* UIView+SJInfiniteScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
