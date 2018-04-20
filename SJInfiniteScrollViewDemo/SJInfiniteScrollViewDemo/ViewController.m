@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "SJInfiniteScrollView.h"
 #import <MJExtension.h>
-//#import "UIImageView+WebCache.h"
 
 @interface ViewController ()
 <SJInfiniteScrollViewDelegate, SJInfiniteScrollViewDataSource>
@@ -31,9 +30,7 @@
 
     self.sc.infiniteDelegate = self;
     self.sc.infiniteDataSource = self;
-    
-//    [self.testImage sd_setImageWithURL:[NSURL URLWithString:@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2958139619,1451793191&fm=27&gp=0.jpg"]];
-    
+        
     NSArray *arr = @[@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2958139619,1451793191&fm=27&gp=0.jpg",
                      @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1685382092,1727136322&fm=27&gp=0.jpg",
                      @"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=284552213,3359816284&fm=27&gp=0.jpg",
