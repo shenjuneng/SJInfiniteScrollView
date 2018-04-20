@@ -229,6 +229,7 @@
 				9F76FF0B20898F3A00C6553A /* SDWebImageCoderHelper.m */,
 				9F76FF0C20898F3A00C6553A /* SDWebImageCompat.m */,
 				9F76FF0D20898F3A00C6553A /* SDWebImageImageIOCoder.h */,
+				9F76FF2720898F3A00C6553A /* SDWebImagePrefetcher.h */,
 				9F76FF0E20898F3A00C6553A /* SDWebImagePrefetcher.m */,
 				9F76FF0F20898F3A00C6553A /* UIView+WebCache.h */,
 				9F76FF1020898F3A00C6553A /* UIView+WebCacheOperation.h */,
@@ -254,7 +255,6 @@
 				9F76FF2420898F3A00C6553A /* UIImage+ForceDecode.h */,
 				9F76FF2520898F3A00C6553A /* UIView+WebCacheOperation.m */,
 				9F76FF2620898F3A00C6553A /* UIView+WebCache.m */,
-				9F76FF2720898F3A00C6553A /* SDWebImagePrefetcher.h */,
 				9F76FF2820898F3A00C6553A /* SDWebImageImageIOCoder.m */,
 				9F76FF2920898F3A00C6553A /* SDWebImageCompat.h */,
 				9F76FF2A20898F3A00C6553A /* SDWebImageCoderHelper.h */,
@@ -696,7 +696,7 @@
 			baseConfigurationReference = 9FB232C4CE0334BF71A0ADBA /* Pods-SJInfiniteScrollViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A26RT57CY4;
 				INFOPLIST_FILE = SJInfiniteScrollViewDemo/Info.plist;
@@ -715,7 +715,7 @@
 			baseConfigurationReference = B42E0D90173B13C36F85DD08 /* Pods-SJInfiniteScrollViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A26RT57CY4;
 				INFOPLIST_FILE = SJInfiniteScrollViewDemo/Info.plist;
