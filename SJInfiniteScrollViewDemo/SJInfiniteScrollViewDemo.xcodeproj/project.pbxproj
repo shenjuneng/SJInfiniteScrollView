@@ -115,6 +115,7 @@
 		9FDA9F072088610300BE441B = {
 			isa = PBXGroup;
 			children = (
+				9FDA9F6620886EC600BE441B /* SJInfiniteScrollView */,
 				9FDA9F122088610300BE441B /* SJInfiniteScrollViewDemo */,
 				9FDA9F2B2088610600BE441B /* SJInfiniteScrollViewDemoTests */,
 				9FDA9F362088610600BE441B /* SJInfiniteScrollViewDemoUITests */,
@@ -137,7 +138,6 @@
 		9FDA9F122088610300BE441B /* SJInfiniteScrollViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9FDA9F6620886EC600BE441B /* SJInfiniteScrollView */,
 				9FDA9F132088610300BE441B /* AppDelegate.h */,
 				9FDA9F142088610300BE441B /* AppDelegate.m */,
 				9FDA9F162088610300BE441B /* ViewController.h */,
