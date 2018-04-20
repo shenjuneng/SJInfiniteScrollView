@@ -3,7 +3,6 @@ platform :ios, '9.0'
 target 'SJInfiniteScrollViewDemo' do
 
 pod 'MJExtension'
-pod 'SDWebImage'
 
 end
 
