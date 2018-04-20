@@ -29,11 +29,18 @@
     self.sc.infiniteDelegate = self;
     self.sc.infiniteDataSource = self;
     
+    
+    NSArray *arr = @[@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2958139619,1451793191&fm=27&gp=0.jpg",
+                     @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1685382092,1727136322&fm=27&gp=0.jpg",
+                     @"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=284552213,3359816284&fm=27&gp=0.jpg",
+                     @"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1622756279,3823459048&fm=27&gp=0.jpg"];
+    
     NSMutableArray *tempArr = [NSMutableArray array];
+    
     for (NSInteger i = 0; i < 20; i++) {
-        NSString *str = [NSString stringWithFormat:@"小清新%zd", i%4+1];
-        NSDictionary *dic = @{@"imageName" : str,
-                              @"type" : @"0"};
+//        NSString *str = [NSString stringWithFormat:@"小清新%zd", i%4+1];
+        NSDictionary *dic = @{@"imageName" : arr[i%4],
+                              @"type" : @"1"};
         [tempArr addObject:[SJInfiniteItem mj_objectWithKeyValues:dic]];
     }
     
