@@ -696,6 +696,7 @@
 			baseConfigurationReference = 9FB232C4CE0334BF71A0ADBA /* Pods-SJInfiniteScrollViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A26RT57CY4;
 				INFOPLIST_FILE = SJInfiniteScrollViewDemo/Info.plist;
@@ -714,6 +715,7 @@
 			baseConfigurationReference = B42E0D90173B13C36F85DD08 /* Pods-SJInfiniteScrollViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A26RT57CY4;
 				INFOPLIST_FILE = SJInfiniteScrollViewDemo/Info.plist;
