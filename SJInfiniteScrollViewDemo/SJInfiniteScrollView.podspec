@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SJInfiniteScrollView"
-  s.version      = "0.0.12"
+  s.version      = "0.0.13"
   s.summary      = "A infiniteScrollView"
 
   # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/shenjuneng/SJInfiniteScrollView.git", :tag => "0.0.12" }
+  s.source       = { :git => "https://github.com/shenjuneng/SJInfiniteScrollView.git", :tag => "0.0.13" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
