@@ -9,11 +9,14 @@
 #import "ViewController.h"
 #import "SJInfiniteScrollView.h"
 #import <MJExtension.h>
+#import "UIImageView+WebCache.h"
 
 @interface ViewController ()
 <SJInfiniteScrollViewDelegate, SJInfiniteScrollViewDataSource>
 
 @property (weak, nonatomic) IBOutlet SJInfiniteScrollView *sc;
+
+@property (weak, nonatomic) IBOutlet UIImageView *testImage;
 
 @property (weak, nonatomic) IBOutlet UILabel *pageLb;
 
@@ -29,6 +32,7 @@
     self.sc.infiniteDelegate = self;
     self.sc.infiniteDataSource = self;
     
+    [self.testImage sd_setImageWithURL:[NSURL URLWithString:@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2958139619,1451793191&fm=27&gp=0.jpg"]];
     
     NSArray *arr = @[@"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2958139619,1451793191&fm=27&gp=0.jpg",
                      @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1685382092,1727136322&fm=27&gp=0.jpg",
@@ -39,7 +43,7 @@
     
     for (NSInteger i = 0; i < 20; i++) {
 //        NSString *str = [NSString stringWithFormat:@"小清新%zd", i%4+1];
-        NSDictionary *dic = @{@"imageName" : arr[i%4],
+        NSDictionary *dic = @{@"imageUrl" : arr[i%4],
                               @"type" : @"1"};
         [tempArr addObject:[SJInfiniteItem mj_objectWithKeyValues:dic]];
     }
