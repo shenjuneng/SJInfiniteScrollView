@@ -57,9 +57,20 @@
     self.pagingEnabled = YES;
     self.delegate = self;
     self.showsHorizontalScrollIndicator = NO;
+    
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollTap:)];
+    [self addGestureRecognizer:tap];
+    
+    
 }
 
-
+#pragma mark - gestureRecoginzer
+- (void)scrollTap:(UITapGestureRecognizer *)tap {    
+    if ([self.infiniteDelegate respondsToSelector:@selector(infiniteScrollView:selectIndex:)]) {
+        [self.infiniteDelegate infiniteScrollView:self selectIndex:self.currentPage];
+    }
+}
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {

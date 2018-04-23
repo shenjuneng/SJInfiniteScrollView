@@ -20,7 +20,6 @@
 		9F76FF982089C64500C6553A /* SJInfiniteSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F76FF932089C64500C6553A /* SJInfiniteSubView.m */; };
 		9F76FF992089C64500C6553A /* SJInfiniteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F76FF952089C64500C6553A /* SJInfiniteItem.m */; };
 		9F76FF9A2089C64500C6553A /* UIView+SJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F76FF962089C64500C6553A /* UIView+SJInfiniteScrollView.m */; };
-		9F76FF9D2089C67800C6553A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F76FF9C2089C67800C6553A /* UIImageView+WebCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +65,6 @@
 		9F76FF942089C64500C6553A /* SJInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteScrollView.h; sourceTree = "<group>"; };
 		9F76FF952089C64500C6553A /* SJInfiniteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteItem.m; sourceTree = "<group>"; };
 		9F76FF962089C64500C6553A /* UIView+SJInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SJInfiniteScrollView.m"; sourceTree = "<group>"; };
-		9F76FF9B2089C67800C6553A /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
-		9F76FF9C2089C67800C6553A /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		DF2626B9DD0F18C54C3330A0 /* Pods-SJInfiniteScrollViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJInfiniteScrollViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJInfiniteScrollViewDemo/Pods-SJInfiniteScrollViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FB38552FA168C573657397E0 /* libPods-SJInfiniteScrollViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJInfiniteScrollViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,8 +129,6 @@
 		9F76FF5B2089C5C800C6553A /* SJInfiniteScrollViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9F76FF9B2089C67800C6553A /* UIImageView+WebCache.h */,
-				9F76FF9C2089C67800C6553A /* UIImageView+WebCache.m */,
 				9F76FF5C2089C5C800C6553A /* AppDelegate.h */,
 				9F76FF5D2089C5C800C6553A /* AppDelegate.m */,
 				9F76FF5F2089C5C800C6553A /* ViewController.h */,
@@ -168,13 +163,13 @@
 		9F76FF8E2089C64500C6553A /* SJInfiniteScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				9F76FF8F2089C64500C6553A /* SJInfiniteSubView.h */,
-				9F76FF902089C64500C6553A /* SJInfiniteItem.h */,
-				9F76FF912089C64500C6553A /* SJInfiniteScrollView.m */,
-				9F76FF922089C64500C6553A /* UIView+SJInfiniteScrollView.h */,
-				9F76FF932089C64500C6553A /* SJInfiniteSubView.m */,
 				9F76FF942089C64500C6553A /* SJInfiniteScrollView.h */,
+				9F76FF912089C64500C6553A /* SJInfiniteScrollView.m */,
+				9F76FF8F2089C64500C6553A /* SJInfiniteSubView.h */,
+				9F76FF932089C64500C6553A /* SJInfiniteSubView.m */,
+				9F76FF902089C64500C6553A /* SJInfiniteItem.h */,
 				9F76FF952089C64500C6553A /* SJInfiniteItem.m */,
+				9F76FF922089C64500C6553A /* UIView+SJInfiniteScrollView.h */,
 				9F76FF962089C64500C6553A /* UIView+SJInfiniteScrollView.m */,
 			);
 			path = SJInfiniteScrollView;
@@ -343,7 +338,6 @@
 			files = (
 				9F76FF612089C5C800C6553A /* ViewController.m in Sources */,
 				9F76FF982089C64500C6553A /* SJInfiniteSubView.m in Sources */,
-				9F76FF9D2089C67800C6553A /* UIImageView+WebCache.m in Sources */,
 				9F76FF6C2089C5CB00C6553A /* main.m in Sources */,
 				9F76FF992089C64500C6553A /* SJInfiniteItem.m in Sources */,
 				9F76FF972089C64500C6553A /* SJInfiniteScrollView.m in Sources */,
