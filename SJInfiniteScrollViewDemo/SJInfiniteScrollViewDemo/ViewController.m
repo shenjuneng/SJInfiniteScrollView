@@ -57,6 +57,21 @@
 
 - (void)infiniteScrollView:(SJInfiniteScrollView *)view selectIndex:(NSInteger)index {
     NSLog(@"%zd", index);
+//    SJInfiniteItem *item = self.dataList[index];
+//    UIImage *img = [UIImage imageNamed:item.imageName];
+//    UIImageView *imgview = [[UIImageView alloc] initWithImage:img];
+//    imgview.contentMode = UIViewContentModeScaleAspectFill;
+//    imgview.clipsToBounds = YES;
+////    [self.sc addSubview: imgview];
+////    imgview.frame = self.sc.bounds;
+//    [[UIApplication sharedApplication].keyWindow addSubview:imgview];
+//    CGRect rect = [self.view convertRect:self.sc.frame toView:[UIApplication sharedApplication].keyWindow];
+//    imgview.frame = rect;
+//    
+//    [UIView animateWithDuration:0.5 animations:^{
+//        imgview.frame = [UIApplication sharedApplication].keyWindow.bounds;
+//    } completion:^(BOOL finished) {
+//    }];
 }
 
 @end
