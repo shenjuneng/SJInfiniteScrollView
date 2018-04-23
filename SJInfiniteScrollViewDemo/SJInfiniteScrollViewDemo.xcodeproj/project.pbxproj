@@ -136,8 +136,6 @@
 				9F76FF5D2089C5C800C6553A /* AppDelegate.m */,
 				9F76FF5F2089C5C800C6553A /* ViewController.h */,
 				9F76FF602089C5C800C6553A /* ViewController.m */,
-				9FB4F7A7208D8599002E2641 /* SJImageScrollView.h */,
-				9FB4F7A8208D8599002E2641 /* SJImageScrollView.m */,
 				9F76FF622089C5C800C6553A /* Main.storyboard */,
 				9F76FF652089C5CB00C6553A /* Assets.xcassets */,
 				9F76FF672089C5CB00C6553A /* LaunchScreen.storyboard */,
@@ -176,6 +174,8 @@
 				9F76FF952089C64500C6553A /* SJInfiniteItem.m */,
 				9F76FF922089C64500C6553A /* UIView+SJInfiniteScrollView.h */,
 				9F76FF962089C64500C6553A /* UIView+SJInfiniteScrollView.m */,
+				9FB4F7A7208D8599002E2641 /* SJImageScrollView.h */,
+				9FB4F7A8208D8599002E2641 /* SJImageScrollView.m */,
 			);
 			path = SJInfiniteScrollView;
 			sourceTree = "<group>";

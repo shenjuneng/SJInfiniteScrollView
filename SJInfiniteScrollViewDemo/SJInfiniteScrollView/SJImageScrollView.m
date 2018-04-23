@@ -12,6 +12,8 @@
 
 @interface SJImageScrollView () <UIScrollViewDelegate>
 
+@property (strong, nonatomic) UIView *refView;
+
 @end
 
 @implementation SJImageScrollView
@@ -45,7 +47,7 @@
 //    UIImage *image = [UIImage alloc] init;
     self.imageView = [[UIImageView alloc] init];
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
-    self.imageView.clipsToBounds = YES;
+    self.imageView.clipsToBounds = NO;
     [self addSubview:self.imageView];
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,11 +76,26 @@
 
 #pragma mark - gesture
 - (void)tapView:(UITapGestureRecognizer *)tapGestureRecognizer {
-    [UIView animateWithDuration:0.2 animations:^{
-        self.alpha = 0;
-    } completion:^(BOOL finished) {
-        [self removeFromSuperview];
-    }];
+    
+    dispatch_queue_t queue = dispatch_queue_create("d", DISPATCH_QUEUE_CONCURRENT);
+
+    dispatch_async(queue, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"%@", [NSThread currentThread]);
+            [self setZoomScale:1 animated:YES];
+        });
+        
+    });
+    
+    dispatch_barrier_sync(queue, ^{
+        NSLog(@"+++++");
+    });
+    
+    dispatch_async(queue, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+             [self hidenSelf];
+        });
+    });
 }
 
 - (void)doubleTapView:(UITapGestureRecognizer *)tapGestureRecognizer {
@@ -108,8 +125,49 @@
         }
         self.contentOffset = CGPointMake(xOffset, yOffset);
     }
+    
+//    self.contentSize = self.imageView.size;
 }
 
+#pragma mark - public
+- (void)showSelfWithRefView:(UIView *)refView {
+    self.refView = refView;
+    [[UIApplication sharedApplication].keyWindow addSubview:self];
+    CGRect rect = [self.refView.superview convertRect:refView.frame toView:[UIApplication sharedApplication].keyWindow];
+    NSLog(@"%@", NSStringFromCGRect(rect));
+    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@(rect.origin.y));
+        make.left.equalTo(@(rect.origin.x));
+        make.size.equalTo(refView);
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.27 animations:^{
+            //        sv.frame = [UIApplication sharedApplication].keyWindow.bounds;
+            [self mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(@(0));
+                make.left.equalTo(@(0));
+                make.size.equalTo([UIApplication sharedApplication].keyWindow);
+            }];
+            [[UIApplication sharedApplication].keyWindow layoutIfNeeded];
+        } completion:^(BOOL finished) {
+        }];
+    });
+}
 
+- (void)hidenSelf {
+    CGRect rect = [self.refView.superview convertRect:self.refView.frame toView:[UIApplication sharedApplication].keyWindow];
+    NSLog(@"%@", NSStringFromCGRect(self.refView.frame));
+    [UIView animateWithDuration:0.27 animations:^{
+        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@(rect.origin.y));
+            make.left.equalTo(@(rect.origin.x));
+            make.size.mas_equalTo(CGSizeMake(240, 362));
+        }];
+        [[UIApplication sharedApplication].keyWindow layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
+}
 
 @end

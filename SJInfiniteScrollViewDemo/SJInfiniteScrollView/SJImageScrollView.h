@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIImageView *imageView;
 
+- (void)showSelfWithRefView:(UIView *)refView;
+
 @end
