@@ -43,7 +43,7 @@
 //    self.showsHorizontalScrollIndicator = NO;
     self.delegate = self;
     
-    self.backgroundColor = [UIColor yellowColor];
+    self.backgroundColor = [UIColor clearColor];
 //    UIImage *image = [UIImage alloc] init;
     self.imageView = [[UIImageView alloc] init];
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
