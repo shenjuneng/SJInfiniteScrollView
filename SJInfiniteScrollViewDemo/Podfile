@@ -4,6 +4,7 @@ target 'SJInfiniteScrollViewDemo' do
 
 pod 'MJExtension'
 pod 'SDWebImage'
+pod 'Masonry'
 
 end
 

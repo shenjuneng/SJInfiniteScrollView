@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SJInfiniteItem.h"
 #import "UIView+SJInfiniteScrollView.h"
+#import "SJImageScrollView.h"
 
 @class SJInfiniteScrollView;
 
