@@ -33,7 +33,7 @@
 
     self.sc.infiniteDelegate = self;
     self.sc.infiniteDataSource = self;
-    self.sc.availableTimer = YES;
+//    self.sc.availableTimer = YES;
     
     NSArray *arri = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524562906236&di=70c730ce37ca5f342488f85282eb7cd7&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201601%2F29%2F20160129153406_mEQFH.jpeg",
                      @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=476407592,44588448&fm=27&gp=0.jpg",
@@ -41,7 +41,7 @@
                      @"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=27406517,369827068&fm=11&gp=0.jpg"];
     
     NSMutableArray *arr = [NSMutableArray array];
-    for (NSInteger i = 0; i < 11; i++) {
+    for (NSInteger i = 0; i < 2; i++) {
 //        NSString *str = [NSString stringWithFormat:@"小清新%zd", i%6 + 1];
         NSDictionary *dic = @{@"type":@"1", @"imageUrl": arri[i%4]};
         [arr addObject:[SJInfiniteItem mj_objectWithKeyValues:dic]];
