@@ -211,7 +211,7 @@
             [view.imageView setImage:[UIImage imageNamed:item.imageName]];
             break;
         case SJItemWebImage:
-            [view.imageView sd_setImageWithURL:[NSURL URLWithString:item.imageUrl] placeholderImage:nil];
+            [view.imageView sd_setImageWithURL:[NSURL URLWithString:item.imageUrl] placeholderImage:[UIImage imageNamed:item.placeholderName]];
         default:
             break;
     }

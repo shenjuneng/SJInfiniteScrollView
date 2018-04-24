@@ -47,21 +47,13 @@
 //    self.showsHorizontalScrollIndicator = NO;
     self.delegate = self;
     
-    self.backgroundColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor clearColor];
     self.imageView = [[UIImageView alloc] init];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.clipsToBounds = NO;
     self.imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self addSubview:self.imageView];
-    
-    
-//    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-////        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
-//        make.center.equalTo(self);
-//        make.width.equalTo(self);
-//        make.height.equalTo(self);
-//    }];
-    
+
     // 点击手势
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
     [self.imageView addGestureRecognizer:tapGestureRecognizer];
@@ -154,22 +146,17 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.27 animations:^{
             self.frame = [UIApplication sharedApplication].keyWindow.bounds;
+            self.backgroundColor = [UIColor blackColor];
         } completion:^(BOOL finished) {
+            
         }];
     });
 }
 
 - (void)hidenSelf {
-//    CGRect rect = [self.refView.superview convertRect:self.refView.frame toView:[UIApplication sharedApplication].keyWindow];
-//    NSLog(@"%@", NSStringFromCGRect(self.refView.frame));
     [UIView animateWithDuration:0.27 animations:^{
-//        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(@(self.oldRect.origin.y));
-//            make.left.equalTo(@(self.oldRect.origin.x));
-//            make.size.mas_equalTo(self.oldRect.size);
-//        }];
-//        [[UIApplication sharedApplication].keyWindow layoutIfNeeded];
         self.frame = self.oldRect;
+        self.backgroundColor = [UIColor clearColor];
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];

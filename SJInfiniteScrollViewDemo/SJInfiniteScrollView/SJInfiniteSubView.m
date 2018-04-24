@@ -50,6 +50,7 @@
     self.lb = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
     self.lb.font = [UIFont systemFontOfSize:30];
     [self addSubview:self.lb];
+    self.lb.hidden = YES;
 }
 
 @end

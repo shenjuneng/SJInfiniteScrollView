@@ -19,6 +19,8 @@ typedef enum : NSUInteger {
 
 @property (copy, nonatomic) NSString *imageName;
 
+@property (copy, nonatomic) NSString *placeholderName;
+
 @property (assign, nonatomic) SJItemType type;
 
 @end
