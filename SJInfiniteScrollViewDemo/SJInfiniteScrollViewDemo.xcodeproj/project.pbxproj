@@ -20,6 +20,7 @@
 		9F76FF982089C64500C6553A /* SJInfiniteSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F76FF932089C64500C6553A /* SJInfiniteSubView.m */; };
 		9F76FF992089C64500C6553A /* SJInfiniteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F76FF952089C64500C6553A /* SJInfiniteItem.m */; };
 		9F76FF9A2089C64500C6553A /* UIView+SJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F76FF962089C64500C6553A /* UIView+SJInfiniteScrollView.m */; };
+		9F9816AA208ECE370068D8A8 /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9816A9208ECE370068D8A8 /* SecondVC.m */; };
 		9FB4F7A9208D8599002E2641 /* SJImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB4F7A8208D8599002E2641 /* SJImageScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		9F76FF942089C64500C6553A /* SJInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInfiniteScrollView.h; sourceTree = "<group>"; };
 		9F76FF952089C64500C6553A /* SJInfiniteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInfiniteItem.m; sourceTree = "<group>"; };
 		9F76FF962089C64500C6553A /* UIView+SJInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SJInfiniteScrollView.m"; sourceTree = "<group>"; };
+		9F9816A8208ECE370068D8A8 /* SecondVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
+		9F9816A9208ECE370068D8A8 /* SecondVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
 		9FB4F7A7208D8599002E2641 /* SJImageScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJImageScrollView.h; sourceTree = "<group>"; };
 		9FB4F7A8208D8599002E2641 /* SJImageScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJImageScrollView.m; sourceTree = "<group>"; };
 		DF2626B9DD0F18C54C3330A0 /* Pods-SJInfiniteScrollViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJInfiniteScrollViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJInfiniteScrollViewDemo/Pods-SJInfiniteScrollViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				9F76FF5D2089C5C800C6553A /* AppDelegate.m */,
 				9F76FF5F2089C5C800C6553A /* ViewController.h */,
 				9F76FF602089C5C800C6553A /* ViewController.m */,
+				9F9816A8208ECE370068D8A8 /* SecondVC.h */,
+				9F9816A9208ECE370068D8A8 /* SecondVC.m */,
 				9F76FF622089C5C800C6553A /* Main.storyboard */,
 				9F76FF652089C5CB00C6553A /* Assets.xcassets */,
 				9F76FF672089C5CB00C6553A /* LaunchScreen.storyboard */,
@@ -348,6 +353,7 @@
 				9F76FF992089C64500C6553A /* SJInfiniteItem.m in Sources */,
 				9F76FF972089C64500C6553A /* SJInfiniteScrollView.m in Sources */,
 				9F76FF5E2089C5C800C6553A /* AppDelegate.m in Sources */,
+				9F9816AA208ECE370068D8A8 /* SecondVC.m in Sources */,
 				9F76FF9A2089C64500C6553A /* UIView+SJInfiniteScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

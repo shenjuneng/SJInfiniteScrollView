@@ -8,11 +8,15 @@
 
 #import "SJImageScrollView.h"
 #import "UIView+SJInfiniteScrollView.h"
-#import "Masonry.h"
+
+#define kScreenWidth   [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight  [UIScreen mainScreen].bounds.size.height
 
 @interface SJImageScrollView () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIView *refView;
+
+@property (assign, nonatomic) CGRect oldRect;
 
 @end
 
@@ -43,19 +47,20 @@
 //    self.showsHorizontalScrollIndicator = NO;
     self.delegate = self;
     
-    self.backgroundColor = [UIColor clearColor];
-//    UIImage *image = [UIImage alloc] init;
+    self.backgroundColor = [UIColor blackColor];
     self.imageView = [[UIImageView alloc] init];
-    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.clipsToBounds = NO;
+    self.imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self addSubview:self.imageView];
     
-    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
-        make.center.equalTo(self);
-        make.width.equalTo(self);
-        make.height.equalTo(self);
-    }];
+    
+//    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+////        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+//        make.center.equalTo(self);
+//        make.width.equalTo(self);
+//        make.height.equalTo(self);
+//    }];
     
     // 点击手势
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
@@ -113,20 +118,13 @@
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-    if (scrollView.zoomScale == 1) {
-        NSLog(@"ll");
-        CGFloat xOffset = 0;
-        CGFloat yOffset = 0;
-        if (self.width <= self.contentSize.width) {
-            xOffset = (self.contentSize.width - self.width)*0.5;
-        }
-        if (self.height <= self.contentSize.height) {
-            yOffset = (self.contentSize.height - self.height)*0.5;
-        }
-        self.contentOffset = CGPointMake(xOffset, yOffset);
-    }
-    
-//    self.contentSize = self.imageView.size;
+//    CGRect frame = self.imageView.frame;
+//
+//    frame.origin.y = (self.frame.size.height - self.imageView.frame.size.height) > 0 ? (self.frame.size.height - self.imageView.frame.size.height) * 0.5 : 0;
+//    frame.origin.x = (self.frame.size.width - self.imageView.frame.size.width) > 0 ? (self.frame.size.width - self.imageView.frame.size.width) * 0.5 : 0;
+//    self.imageView.frame = frame;
+//
+//    self.contentSize = CGSizeMake(self.imageView.frame.size.width + 30, self.imageView.frame.size.height + 30);
 }
 
 #pragma mark - public
@@ -134,37 +132,44 @@
     self.refView = refView;
     [[UIApplication sharedApplication].keyWindow addSubview:self];
     CGRect rect = [self.refView.superview convertRect:refView.frame toView:[UIApplication sharedApplication].keyWindow];
-    NSLog(@"%@", NSStringFromCGRect(rect));
-    [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(rect.origin.y));
-        make.left.equalTo(@(rect.origin.x));
-        make.size.equalTo(refView);
-    }];
     
+    CGFloat imageRate = self.imageView.image.size.width/self.imageView.image.size.height;
+    CGFloat refViewRate = self.refView.width/self.refView.height;
+    
+    if (imageRate > refViewRate) {
+        CGFloat w = rect.size.height*imageRate;
+        CGFloat x = rect.origin.x - (w - rect.size.width)*0.5;
+        rect.origin.x = x;
+        rect.size.width = w;
+    } else {
+        CGFloat h = rect.size.width/imageRate;
+        CGFloat y = rect.origin.y - (h - rect.size.height)*0.5;
+        rect.origin.y = y;
+        rect.size.height = h;
+    }
+    self.oldRect = rect;
+    self.frame = self.oldRect;
+    self.imageView.frame = self.bounds;
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.27 animations:^{
-            //        sv.frame = [UIApplication sharedApplication].keyWindow.bounds;
-            [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(@(0));
-                make.left.equalTo(@(0));
-                make.size.equalTo([UIApplication sharedApplication].keyWindow);
-            }];
-            [[UIApplication sharedApplication].keyWindow layoutIfNeeded];
+            self.frame = [UIApplication sharedApplication].keyWindow.bounds;
         } completion:^(BOOL finished) {
         }];
     });
 }
 
 - (void)hidenSelf {
-    CGRect rect = [self.refView.superview convertRect:self.refView.frame toView:[UIApplication sharedApplication].keyWindow];
-    NSLog(@"%@", NSStringFromCGRect(self.refView.frame));
+//    CGRect rect = [self.refView.superview convertRect:self.refView.frame toView:[UIApplication sharedApplication].keyWindow];
+//    NSLog(@"%@", NSStringFromCGRect(self.refView.frame));
     [UIView animateWithDuration:0.27 animations:^{
-        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(@(rect.origin.y));
-            make.left.equalTo(@(rect.origin.x));
-            make.size.mas_equalTo(CGSizeMake(240, 362));
-        }];
-        [[UIApplication sharedApplication].keyWindow layoutIfNeeded];
+//        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(@(self.oldRect.origin.y));
+//            make.left.equalTo(@(self.oldRect.origin.x));
+//            make.size.mas_equalTo(self.oldRect.size);
+//        }];
+//        [[UIApplication sharedApplication].keyWindow layoutIfNeeded];
+        self.frame = self.oldRect;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];

@@ -57,18 +57,22 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="100.29985007496252"/>
         </scene>
-        <!--View Controller-->
+        <!--SecondVC-->
         <scene sceneID="Bao-Wc-ADL">
             <objects>
-                <viewController id="w6V-TP-dOx" sceneMemberID="viewController">
+                <viewController id="w6V-TP-dOx" customClass="SecondVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RL5-PH-hfC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BHt-dH-1pT" customClass="SJImageScrollView">
-                                <rect key="frame" x="16" y="93" width="343" height="537"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9Z-Rw-8XP">
+                                <rect key="frame" x="34" y="464" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickToBig:" destination="w6V-TP-dOx" eventType="touchUpInside" id="bKB-8e-zuU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MWK-bN-ww3"/>
