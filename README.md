@@ -9,5 +9,5 @@ pod 'SJInfiniteScrollView'
 
 # Examples【示例】
 
-![image](https://github.com/shenjuneng/SJInfiniteScrollView/blob/removeXib/ExampleImages/example01.png)
+![image](https://github.com/shenjuneng/SJInfiniteScrollView/blob/removeXib/ExampleImages/examplegif02.gif)
 
