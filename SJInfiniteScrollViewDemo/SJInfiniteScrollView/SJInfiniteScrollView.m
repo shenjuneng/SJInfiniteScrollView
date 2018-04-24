@@ -277,17 +277,17 @@
 
 - (void)buildBrowseTimer
 {
-    if (self.availableTimer == NO) {
+    if (self.availableTimer == NO || self.browseTimer.valid == YES) {
         return;
     }
-    CGFloat timef = 2;
+    CGFloat timef = 5;
     self.browseTimer = [NSTimer scheduledTimerWithTimeInterval:timef target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:self.browseTimer forMode:NSRunLoopCommonModes];
 }
 
 - (void)destroyBrowseTimer
 {
-    if (self.availableTimer == NO) {
+    if (self.availableTimer == NO || self.browseTimer.valid == NO) {
         return;
     }
     [self.browseTimer invalidate];
