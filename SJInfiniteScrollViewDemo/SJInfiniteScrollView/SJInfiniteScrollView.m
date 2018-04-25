@@ -266,12 +266,32 @@
 
 - (void)nextPage {
     CGFloat offset = self.contentOffset.x;
-    
     NSLog(@"%f", offset);
-
-    [self setContentOffset:CGPointMake(offset + self.width, 0) animated:YES];
+    NSInteger xI = offset;
+    NSInteger yI = self.width;
+    if (xI%yI != 0) {
+        xI = xI - xI%yI;
+    }
     
-    [self calculatePageWithOffset:self.contentOffset.x + self.offset + self.width];
+    dispatch_queue_t queue = dispatch_queue_create("d", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setContentOffset:CGPointMake(xI + self.width, 0) animated:YES];
+        });
+        
+    });
+    
+    dispatch_barrier_sync(queue, ^{
+        NSLog(@"+++++");
+    });
+    
+    dispatch_async(queue, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self calculatePageWithOffset:xI + self.offset + self.width];
+        });
+    });
+
 }
 
 
