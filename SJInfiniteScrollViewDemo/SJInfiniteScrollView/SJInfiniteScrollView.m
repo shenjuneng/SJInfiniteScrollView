@@ -220,6 +220,10 @@
 
 #pragma mark - public
 - (void)reloadScrollView {
+    if ([self.infiniteDataSource infiniteItemCount] == 0) {
+        return;
+    }
+    
     self.subViewsArr = [NSMutableArray array];
     
     CGFloat xView = 0;
