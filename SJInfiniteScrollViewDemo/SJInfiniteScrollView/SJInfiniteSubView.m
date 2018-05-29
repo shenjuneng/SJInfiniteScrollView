@@ -7,29 +7,9 @@
 //
 
 #import "SJInfiniteSubView.h"
+#import "SJScaleImageView.h"
 
 @implementation SJInfiniteSubView
-
-//- (instancetype)initView
-//{
-//    NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"SJInfiniteSubView" owner:nil options:nil];
-//    for (id object in objects) {
-//        if ([object isKindOfClass:[SJInfiniteSubView class]]) {
-//            self = object;
-//        }
-//    }
-//
-//    if (self) {
-//
-//    }
-//
-//    return self;
-//}
-//
-//+ (instancetype)SJInfiniteSubView
-//{
-//    return [[self alloc] initView];
-//}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -41,7 +21,7 @@
 }
 
 - (void)setupSubView {
-    self.imageView = [[UIImageView alloc] init];
+    self.imageView = [[SJScaleImageView alloc] init];
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.frame = self.bounds;
     self.imageView.clipsToBounds = YES;

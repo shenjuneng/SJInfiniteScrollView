@@ -41,7 +41,7 @@
                      @"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=27406517,369827068&fm=11&gp=0.jpg"];
     
     NSMutableArray *arr = [NSMutableArray array];
-    for (NSInteger i = 0; i < 2; i++) {
+    for (NSInteger i = 0; i < 10; i++) {
 //        NSString *str = [NSString stringWithFormat:@"小清新%zd", i%6 + 1];
         NSDictionary *dic = @{@"type":@"1", @"imageUrl": arri[i%4]};
         [arr addObject:[SJInfiniteItem mj_objectWithKeyValues:dic]];
@@ -80,16 +80,16 @@
     self.pageLb.text = [NSString stringWithFormat:@"%zd", index];
 }
 
-- (void)infiniteScrollView:(SJInfiniteScrollView *)view selectIndex:(NSInteger)index {
-    NSLog(@"%zd", index);
-    SJInfiniteItem *item = self.dataList[index];
-//    UIImage *img = [UIImage imageNamed:item.imageUrl];
-//    [];
-    
-    self.sView = [[SJImageScrollView alloc] init];
-    [self.sView.imageView sd_setImageWithURL:[NSURL URLWithString:item.imageUrl]];
-    [self.sView showSelfWithRefView:self.sc];
-}
+//- (void)infiniteScrollView:(SJInfiniteScrollView *)view selectIndex:(NSInteger)index {
+//    NSLog(@"%zd", index);
+//    SJInfiniteItem *item = self.dataList[index];
+////    UIImage *img = [UIImage imageNamed:item.imageUrl];
+////    [];
+//    
+//    self.sView = [[SJImageScrollView alloc] init];
+//    [self.sView.imageView sd_setImageWithURL:[NSURL URLWithString:item.imageUrl]];
+//    [self.sView showSelfWithRefView:self.sc];
+//}
 
 - (IBAction)clickTest:(id)sender {
     
