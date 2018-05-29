@@ -45,6 +45,10 @@
 }
 
 - (void)tapIconIMG:(UITapGestureRecognizer *)tapGestureRecognizer {
+    if (self.image == nil) {
+        return;
+    }
+    
     SJImageScrollView *sView = [[SJImageScrollView alloc] init];
     [sView.imageView setImage:self.image];
     [sView showSelfWithRefView:self];
