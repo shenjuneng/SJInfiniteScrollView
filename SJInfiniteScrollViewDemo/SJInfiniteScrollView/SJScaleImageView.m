@@ -11,16 +11,37 @@
 
 @implementation SJScaleImageView
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        NSLog(@"ss");
-        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapIconIMG:)];
-        [self addGestureRecognizer:tapGestureRecognizer];
-        self.userInteractionEnabled = YES;
+        [self commonInit];
     }
     return self;
+}
+
+- (void)commonInit {
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapIconIMG:)];
+    [self addGestureRecognizer:tapGestureRecognizer];
+    self.userInteractionEnabled = YES;
 }
 
 - (void)tapIconIMG:(UITapGestureRecognizer *)tapGestureRecognizer {
