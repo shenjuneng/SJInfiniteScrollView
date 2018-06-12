@@ -7,7 +7,7 @@
 //
 
 #import "SJInfiniteSubView.h"
-#import "SJScaleImageView.h"
+//#import "SJScaleImageView.h"
 
 @implementation SJInfiniteSubView
 
@@ -21,7 +21,7 @@
 }
 
 - (void)setupSubView {
-    self.imageView = [[SJScaleImageView alloc] init];
+    self.imageView = [[UIImageView alloc] init];
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.frame = self.bounds;
     self.imageView.clipsToBounds = YES;
