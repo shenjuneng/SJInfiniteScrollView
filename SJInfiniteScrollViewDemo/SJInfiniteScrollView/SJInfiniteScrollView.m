@@ -224,7 +224,15 @@
         return;
     }
     
+    for (UIView *view in self.subviews) {
+        [view removeFromSuperview];
+    }
+    
     self.subViewsArr = [NSMutableArray array];
+    
+    [self destroyBrowseTimer];
+    
+    self.offset = 0;
     
     CGFloat xView = 0;
     for (NSInteger i = 0; i < PageCount; i++) {
