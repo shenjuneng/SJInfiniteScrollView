@@ -224,6 +224,13 @@
         return;
     }
     
+    if ([self.infiniteDataSource infiniteItemCount] == 1) {
+        self.availableTimer = NO;
+        self.scrollEnabled = NO;
+    } else {
+        self.scrollEnabled = YES;
+    }
+    
     for (UIView *view in self.subviews) {
         [view removeFromSuperview];
     }
