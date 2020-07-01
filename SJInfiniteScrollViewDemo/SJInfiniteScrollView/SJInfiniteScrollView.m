@@ -247,7 +247,7 @@
 //        SJInfiniteSubView *view = [SJInfiniteSubView SJInfiniteSubView];
         SJInfiniteSubView *view = [[SJInfiniteSubView alloc] initWithFrame:CGRectMake(xView, 0, self.width, self.height)];
 //        view.frame = CGRectMake(xView, 0, self.width, self.height);
-        view.backgroundColor = [UIColor yellowColor];
+        view.backgroundColor = [UIColor clearColor];
         [self.subViewsArr addObject:view];
         [self addSubview:view];
       

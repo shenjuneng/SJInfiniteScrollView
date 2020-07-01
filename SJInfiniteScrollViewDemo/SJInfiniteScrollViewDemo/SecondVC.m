@@ -22,7 +22,7 @@
     [super viewDidLoad];
 
     self.sc = [[UIScrollView alloc] initWithFrame:CGRectMake(10, 100, 200, 300)];
-    self.sc.backgroundColor = [UIColor yellowColor];
+    self.sc.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.sc];
     
     self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"小清新6"]];
