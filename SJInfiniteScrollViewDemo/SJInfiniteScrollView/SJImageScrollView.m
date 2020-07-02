@@ -78,14 +78,14 @@
 
     dispatch_async(queue, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"%@", [NSThread currentThread]);
+//            NSLog(@"%@", [NSThread currentThread]);
             [self setZoomScale:1 animated:YES];
         });
         
     });
     
     dispatch_barrier_sync(queue, ^{
-        NSLog(@"+++++");
+//        NSLog(@"+++++");
     });
     
     dispatch_async(queue, ^{

@@ -210,9 +210,14 @@
         case SJItemAssetImage:
             [view.imageView setImage:[UIImage imageNamed:item.imageName]];
             break;
-        case SJItemWebImage:
-            [view.imageView sd_setImageWithURL:[NSURL URLWithString:item.imageUrl] placeholderImage:[UIImage imageNamed:item.placeholderName]];
-        default:
+        case SJItemWebImage:            
+            [view.imageView sd_setImageWithURL:[NSURL URLWithString:item.imageUrl] placeholderImage:[UIImage imageNamed:item.placeholderName] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                
+                if ([self.infiniteDelegate respondsToSelector:@selector(infiniteScrollView:currentIndex:currentImage:)]) {
+                    [self.infiniteDelegate infiniteScrollView:self currentIndex:index currentImage:image];
+                }
+                
+            }];
             break;
     }
     view.lb.text = [NSString stringWithFormat:@"%zd", index];
@@ -285,7 +290,7 @@
 
 - (void)nextPage {
     CGFloat offset = self.contentOffset.x;
-    NSLog(@"%f", offset);
+//    NSLog(@"%f", offset);
     NSInteger xI = offset;
     NSInteger yI = self.width;
     if (xI%yI != 0) {
@@ -302,7 +307,7 @@
     });
     
     dispatch_barrier_sync(queue, ^{
-        NSLog(@"+++++");
+//        NSLog(@"+++++");
     });
     
     dispatch_async(queue, ^{

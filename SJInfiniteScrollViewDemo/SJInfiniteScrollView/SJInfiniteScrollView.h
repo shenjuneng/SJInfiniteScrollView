@@ -4,7 +4,7 @@
 //
 //  Created by 沈骏 on 2018/4/17.
 //  Copyright © 2018年 沈骏. All rights reserved.
-//
+//  version: 1.0.1 新增 图片回调
 
 #import <UIKit/UIKit.h>
 #import "SJInfiniteItem.h"
@@ -33,6 +33,10 @@
 
 - (void)infiniteScrollView:(SJInfiniteScrollView *)view
                selectIndex:(NSInteger)index;
+
+- (void)infiniteScrollView:(SJInfiniteScrollView *)view
+               currentIndex:(NSInteger)index
+              currentImage:(UIImage *)image;
 
 @end
 

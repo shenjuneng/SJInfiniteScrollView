@@ -58,7 +58,7 @@
     
     NSInteger yI = y;
     
-    NSLog(@"%zd, %zd", xI, yI);
+//    NSLog(@"%zd, %zd", xI, yI);
     
     NSInteger zI = xI%yI;
     NSLog(@"%zd", zI);
@@ -79,6 +79,13 @@
 - (void)infiniteScrollView:(SJInfiniteScrollView *)view changeCurrentPageIndex:(NSInteger)index {
     self.pageLb.text = [NSString stringWithFormat:@"%zd", index];
 }
+
+- (void)infiniteScrollView:(SJInfiniteScrollView *)view currentIndex:(NSInteger)index currentImage:(UIImage *)image {
+    
+    
+    NSLog(@"%zd", index);
+}
+
 
 //- (void)infiniteScrollView:(SJInfiniteScrollView *)view selectIndex:(NSInteger)index {
 //    NSLog(@"%zd", index);
